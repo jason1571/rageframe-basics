@@ -120,7 +120,7 @@ class MController extends \common\controllers\BaseController
         // 加入模块验证
         if(Yii::$app->controller->module->id != "app-backend")
         {
-            $permissionName = Yii::$app->controller->module->id . '/' . $permissionName;
+            $permissionName = '/' . Yii::$app->controller->module->id . '/' . $permissionName;
         }
 
         // 不需要RBAC判断的路由全称
